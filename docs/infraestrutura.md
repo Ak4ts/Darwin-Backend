@@ -12,7 +12,6 @@
   /interfaces          # Interfaces de entrada/saída (HTTP, eventos, CLI)
     /http
   main.ts              # Ponto de entrada (composition root)
-  server.ts            # (legado, pode ser removido após migração total)
 ```
 
 - **application**: onde ficarão os casos de uso e orquestração de regras de negócio.
@@ -59,5 +58,4 @@ npm run build && npm start # produção
 - `src/infrastructure/logger/pino-logger.ts`
 - `src/infrastructure/metrics/metrics-provider.ts`
 - `src/interfaces/http/health-controller.ts`
-- `src/server.ts` (marcado como legado)
 - `docs/infraestrutura.md` (este documento)
