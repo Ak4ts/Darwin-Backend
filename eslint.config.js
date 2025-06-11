@@ -2,6 +2,7 @@
 /** @type {import('eslint').FlatConfigItem[]} */
 const tseslint = require('typescript-eslint');
 const prettier = require('eslint-config-prettier');
+const prettierPlugin = require('eslint-plugin-prettier');
 
 module.exports = [
   {
@@ -15,6 +16,7 @@ module.exports = [
     },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
+      prettier: prettierPlugin,
     },
     rules: {
       ...tseslint.configs.recommended.rules,
