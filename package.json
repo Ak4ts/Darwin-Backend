@@ -1,0 +1,20 @@
+{
+  "name": "darwin-backend",
+  "version": "0.0.0",
+  "description": "darwin é um software de gestão pessoal",
+  "homepage": "https://github.com/Ak4ts/Darwin-Backend#readme",
+  "bugs": {
+    "url": "https://github.com/Ak4ts/Darwin-Backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ak4ts/Darwin-Backend.git"
+  },
+  "license": "ISC",
+  "author": "Ak4ts - Luiz Melo",
+  "type": "commonjs",
+  "main": "src/server.ts",
+  "scripts": {
+    "test": "node src/server.ts"
+  }
+}
