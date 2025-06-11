@@ -43,6 +43,51 @@ Darwin é um software de gestão pessoal projetado para ser um cofre de ideias, 
 2. Para rodar o backend: `npm run dev` (ajustar conforme scripts definidos)
 3. Consulte `/docs/funcionalidades-mvp.md` para detalhes das features
 
+## Ambiente de Desenvolvimento
+
+O projeto já está configurado com as principais ferramentas para garantir qualidade, padronização e produtividade no desenvolvimento.
+
+### Requisitos
+- Node.js 24+
+- npm 9+
+
+### Instalação
+
+```sh
+npm install
+```
+
+### Scripts Disponíveis
+
+- `npm run dev` – Inicia o servidor em modo desenvolvimento com reload automático (nodemon)
+- `npm run build` – Compila o projeto TypeScript para JavaScript em `dist/`
+- `npm start` – Executa o servidor a partir do build
+- `npm test` – Executa os testes automatizados (Jest)
+- `npm run lint` – Executa o ESLint para análise de código
+- `npm run format` – Formata o código com Prettier
+
+### Qualidade de Código
+- Commits só são aceitos se passarem pelo lint e prettier automaticamente (Husky + lint-staged)
+- Recomenda-se instalar as extensões sugeridas do VSCode (ver `.vscode/extensions.json`)
+
+### Variáveis de Ambiente
+- Copie `.env.example` para `.env` e ajuste conforme necessário
+
+## Docker
+
+### Build e execução com Docker
+
+Para rodar o projeto em ambiente Docker:
+
+```sh
+docker-compose up --build
+```
+
+- O serviço principal estará disponível em http://localhost:3000
+- O RabbitMQ estará disponível em http://localhost:15672 (usuário/senha padrão: guest/guest)
+
+> Certifique-se de configurar as variáveis de ambiente conforme necessário no `docker-compose.yml` ou `.env`.
+
 ---
 
 > Para dúvidas, consulte os arquivos em `/docs` e `/adr`.

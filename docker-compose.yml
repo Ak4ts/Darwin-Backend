@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  darwin-backend:
+    build: .
+    container_name: darwin-backend
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - RABBITMQ_URL=amqp://rabbitmq
+    volumes:
+      - .:/app
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - '5672:5672'
+      - '15672:15672'
